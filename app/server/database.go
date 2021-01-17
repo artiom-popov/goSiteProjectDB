@@ -4,7 +4,8 @@ import (
 	// Register some standard stuff
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
-)
+	
+	
 
 // Db ... - глобальная переменная с подключением к БД
 var Db *sqlx.DB
