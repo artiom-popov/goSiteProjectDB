@@ -1,9 +1,11 @@
 package main
 
 import (
-	"github.com/julienschmidt/httprouter"
 	"goSiteProjectDB/app/controller"
 	"goSiteProjectDB/app/server"
+
+	"github.com/julienschmidt/httprouter"
+
 	"log"
 	"net/http"
 )
@@ -34,7 +36,9 @@ func routes(r *httprouter.Router) {
 	r.GET("/", controller.StartPage)
 	r.GET("/users", controller.GetUsers)
 
-	r.POST("/user/add", controller.AddUser)
-	r.DELETE("/user/delete/:userId", controller.DeleteUser)
-	r.POST("/user/update/:userId", controller.UpdateUser)
+	r.GET("/index", controller.NewPage)
+
+	r.POST("/users/add", controller.AddUser)
+	r.DELETE("/users/delete/:userId", controller.DeleteUser)
+	r.POST("/users/update/:userId", controller.UpdateUser)
 }

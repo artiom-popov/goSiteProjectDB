@@ -1,11 +1,15 @@
 package controller
 
 import (
-	"github.com/julienschmidt/httprouter"
 	"html/template"
 	"net/http"
 	"path/filepath"
+
+	"github.com/julienschmidt/httprouter"
 )
+
+//Функция «StartPage» реализует интерфейс хендлера, который обрабатывает запрос,
+//приходящий по маршруту «/» и др. для запросов типа GET.
 
 func StartPage(rw http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	//указываем путь к нужному файлу

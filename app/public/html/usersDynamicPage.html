@@ -1,3 +1,6 @@
+
+
+
 {{define "users"}}
 
 <!doctype html>
@@ -5,20 +8,23 @@
     <head>
         {{template "meta"}}
         {{template "styles"}}
-        <title>Title</title>
+        <title>Пользователи</title>
     </head>
 <body class="d-flex flex-column h-100">
     <table class="table">
+       
         <th>id</th>
         <th>Имя</th>
         <th>Фамилия</th>
-
+       
         {{range .}}
+     
         <tr>
             <td>{{.Id}}</td>
             <td>{{.Name}}</td>
             <td>{{.Surname}}</td>
         </tr>
+        
         {{end}}
 
     </table>
