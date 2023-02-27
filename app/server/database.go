@@ -14,7 +14,7 @@ func InitDB() (err error) {
 	//строка, содержащая данные для подключения к БД в следующем формате:
 	//login:password@tcp(host:port)/dbname    3qjICBvrud 5eCmuTatIa
 	//var dataSourceName = "3qjICBvrud:5eCmuTatIa@tcp(remotemysql.com:3306)/3qjICBvrud"
-	var dataSourceName = "arxius:Mant131412ant@@tcp(localhost:3306)/users"
+	var dataSourceName = "arxius:password@@tcp(localhost:3306)/users"
 	//подключаемся к БД, используя нужный драйвер и данные для подключения
 	Db, err = sqlx.Connect("mysql", dataSourceName)
 	if err != nil {
